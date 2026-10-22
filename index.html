@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c4a8a">
+  <meta name="description" content="Kho Tàng Tri Thức — mở rộng hiểu biết, khám phá thế giới và tích lũy tri thức mỗi ngày.">
+  <meta property="og:title" content="Kho Tàng Tri Thức — Knowledge Hub">
+  <meta property="og:description" content="Mỗi ngày một khám phá mới.">
+  <title>Kho Tàng Tri Thức — Knowledge Hub</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="home" aria-label="Kho Tàng Tri Thức - Trang chủ">
+        <img src="assets/logo.svg" alt="" class="brand-logo">
+        <span class="brand-copy"><strong>Kho Tàng Tri Thức</strong><small>KNOWLEDGE HUB</small></span>
+      </a>
+      <div class="side-label">KHÔNG GIAN TRI THỨC</div>
+      <nav class="side-nav" aria-label="Điều hướng chính">
+        <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Trang chủ</button>
+        <button class="nav-item" data-view="explore"><span class="nav-icon">✧</span> Khám phá</button>
+        <button class="nav-item" data-view="latest"><span class="nav-icon">◷</span> Bài viết mới</button>
+        <button class="nav-item" data-view="categories"><span class="nav-icon">▦</span> Danh mục</button>
+        <button class="nav-item" data-view="ranking"><span class="nav-icon">↗</span> Bảng xếp hạng</button>
+        <button class="nav-item" data-view="saved"><span class="nav-icon">♡</span> Bài đã lưu <span class="nav-count" id="savedCount">0</span></button>
+        <button class="nav-item" data-view="history"><span class="nav-icon">◴</span> Lịch sử đọc</button>
+      </nav>
+      <div class="side-label side-label-spaced">TÀI KHOẢN</div>
+      <nav class="side-nav">
+        <button class="nav-item" data-view="wallet"><span class="nav-icon token-icon">K</span> Ví K Token <span class="maintenance-dot"></span></button>
+        <button class="nav-item" data-view="profile"><span class="nav-icon">◎</span> Hồ sơ cá nhân</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="token-mini">
+          <div class="token-mini-icon">K</div>
+          <div><strong>K Token</strong><small>Đang phát triển</small></div>
+          <span class="status-pill">BẢO TRÌ</span>
+        </div>
+        <button class="nav-item" id="themeToggle"><span class="nav-icon" id="themeIcon">☾</span> Giao diện tối</button>
+        <div class="sidebar-foot">© 2026 Knowledge Hub<br><span>Tri thức mở ra tương lai.</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menuToggle" aria-label="Mở menu">☰</button>
+        <div class="breadcrumb"><span>Knowledge Hub</span><span class="crumb-slash">/</span><strong id="pageCrumb">Trang chủ</strong></div>
+        <div class="top-actions">
+          <button class="icon-btn search-shortcut" id="focusSearch" aria-label="Tìm kiếm">⌕</button>
+          <button class="wallet-shortcut" data-view="wallet"><span class="k-badge">K</span><span>K Token</span><span class="tiny-maint">Bảo trì</span></button>
+          <button class="login-btn" id="loginBtn"><span class="google-g">G</span><span id="loginText">Đăng nhập</span></button>
+          <button class="avatar-btn hidden" id="avatarBtn" data-view="profile">KH</button>
+        </div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="view active" id="view-home">
+          <section class="hero">
+            <div class="hero-glow"></div>
+            <div class="hero-content">
+              <div class="eyebrow"><span class="eyebrow-dot"></span> KHÁM PHÁ MỖI NGÀY <span class="eyebrow-line"></span></div>
+              <h1>Mỗi ngày một<br><span>khám phá mới.</span></h1>
+              <p>Mở rộng hiểu biết, khám phá thế giới và tích lũy tri thức mỗi ngày.</p>
+              <form class="hero-search" id="heroSearchForm">
+                <span class="search-symbol">⌕</span>
+                <input id="heroSearchInput" placeholder="Bạn muốn khám phá điều gì hôm nay?" autocomplete="off" aria-label="Tìm kiếm tri thức">
+                <button type="submit">Tìm kiếm <span>→</span></button>
+              </form>
+              <div class="hero-meta"><span>✦ Nội dung đa lĩnh vực</span><span>◷ Đọc theo nhịp của bạn</span><span>⌁ Miễn phí khám phá</span></div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="planet planet-main"><div class="planet-shine"></div><div class="planet-ring"></div></div>
+              <div class="planet planet-small"></div><div class="spark spark-a">✦</div><div class="spark spark-b">✧</div>
+              <div class="float-card float-card-top"><span class="float-icon">✦</span><div><b>Tri thức mỗi ngày</b><small>Luôn có điều mới để học</small></div></div>
+              <div class="float-card float-card-bottom"><span class="float-chart">↗</span><div><b>Khám phá không giới hạn</b><small>15 lĩnh vực kiến thức</small></div></div>
+            </div>
+            <div class="hero-bottom-line"></div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading"><div><div class="section-kicker">BẮT ĐẦU TỪ ĐÂY</div><h2>Khám phá theo chủ đề</h2><p>Chọn lĩnh vực khiến bạn tò mò.</p></div><button class="text-link" data-view="categories">Tất cả danh mục <span>→</span></button></div>
+            <div class="category-grid" id="homeCategories"></div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading"><div><div class="section-kicker">ĐƯỢC TUYỂN CHỌN</div><h2>Tri thức nổi bật</h2><p>Những câu chuyện đáng để dành vài phút khám phá.</p></div><button class="text-link" data-view="explore">Khám phá thêm <span>→</span></button></div>
+            <div class="article-grid featured-grid" id="featuredArticles"></div>
+          </section>
+
+          <section class="daily-banner">
+            <div class="daily-icon">✦</div><div><span class="section-kicker">THÓI QUEN NHỎ, HIỂU BIẾT LỚN</span><h3>Dành 5 phút mỗi ngày cho sự tò mò.</h3><p>Hãy để một câu hỏi hay dẫn bạn đến một khám phá mới.</p></div>
+            <button class="primary-btn" data-view="explore">Khám phá ngẫu nhiên <span>↗</span></button>
+          </section>
+          <section class="section-block">
+            <div class="section-heading"><div><div class="section-kicker">VỪA CẬP BẾN</div><h2>Bài viết mới</h2><p>Các bài viết mẫu trong bản khởi tạo.</p></div><button class="text-link" data-view="latest">Xem tất cả <span>→</span></button></div>
+            <div class="article-grid" id="latestArticles"></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-explore">
+          <div class="page-intro"><div class="section-kicker">MỞ RỘNG TẦM NHÌN</div><h1>Khám phá tri thức</h1><p>Đi theo sự tò mò của bạn — mỗi chủ đề là một cánh cửa mới.</p></div>
+          <div class="filter-bar"><div class="search-field"><span>⌕</span><input id="exploreSearch" placeholder="Tìm bài viết, chủ đề..." aria-label="Tìm bài viết"></div><select id="categoryFilter" aria-label="Lọc danh mục"><option value="all">Tất cả danh mục</option></select><select id="sortFilter" aria-label="Sắp xếp"><option value="featured">Đề xuất</option><option value="newest">Mới nhất</option><option value="title">Tên A–Z</option></select></div>
+          <div class="result-caption" id="exploreCount"></div><div class="article-grid" id="exploreArticles"></div>
+        </section>
+
+        <section class="view" id="view-latest">
+          <div class="page-intro"><div class="section-kicker">LUÔN CÓ ĐIỀU MỚI</div><h1>Bài viết mới nhất</h1><p>Cập nhật tri thức theo thời gian. Bản demo hiện sử dụng nội dung mẫu.</p></div>
+          <div class="notice notice-blue"><span>ⓘ</span><div><strong>Trạng thái đồng bộ dữ liệu</strong><p>Chưa kết nối tác vụ cập nhật tự động. Ngày hiển thị là ngày mẫu của nội dung, không phải xác nhận đồng bộ trực tiếp.</p></div></div>
+          <div class="article-grid" id="allLatestArticles"></div>
+        </section>
+
+        <section class="view" id="view-categories">
+          <div class="page-intro"><div class="section-kicker">BẢN ĐỒ TRI THỨC</div><h1>Danh mục kiến thức</h1><p>15 lĩnh vực để bạn tìm thấy điều mình muốn biết.</p></div>
+          <div class="category-grid category-grid-large" id="allCategories"></div>
+        </section>
+
+        <section class="view" id="view-ranking">
+          <div class="page-intro"><div class="section-kicker">ĐƯỢC QUAN TÂM</div><h1>Bảng xếp hạng</h1><p>Khám phá các bài viết nổi bật trong thư viện mẫu.</p></div>
+          <div class="ranking-panel" id="rankingList"></div>
+          <p class="fine-print">Lượt đọc trong bản xem trước là dữ liệu minh họa, không phải số liệu người dùng thực tế.</p>
+        </section>
+
+        <section class="view" id="view-saved">
+          <div class="page-intro"><div class="section-kicker">GÓC CỦA BẠN</div><h1>Bài viết đã lưu</h1><p>Giữ lại những điều bạn muốn đọc lần nữa.</p></div>
+          <div class="article-grid" id="savedArticles"></div><div class="empty-state hidden" id="savedEmpty"><div class="empty-illustration">♡</div><h3>Chưa có bài viết nào</h3><p>Nhấn biểu tượng trái tim ở bài viết để lưu lại tại đây.</p><button class="primary-btn" data-view="explore">Tìm bài hay <span>→</span></button></div>
+        </section>
+
+        <section class="view" id="view-history">
+          <div class="page-intro"><div class="section-kicker">HÀNH TRÌNH HỌC HỎI</div><h1>Lịch sử đọc</h1><p>Các bài viết bạn đã mở gần đây trên thiết bị này.</p></div>
+          <div class="history-list" id="historyList"></div><div class="empty-state hidden" id="historyEmpty"><div class="empty-illustration">◴</div><h3>Hành trình của bạn bắt đầu ở đây</h3><p>Mở một bài viết bất kỳ để lưu lịch sử đọc trên thiết bị.</p><button class="primary-btn" data-view="explore">Khám phá ngay <span>→</span></button></div>
+        </section>
+
+        <section class="view" id="view-wallet">
+          <div class="page-intro"><div class="section-kicker">ĐIỂM NỘI BỘ TƯƠNG LAI</div><h1>Ví K Token <span class="inline-maint">ĐANG PHÁT TRIỂN</span></h1><p>Khu vực quản lý điểm nội bộ dự kiến dành cho các tính năng tương lai.</p></div>
+          <div class="wallet-hero">
+            <div class="wallet-hero-content"><div class="wallet-brand"><div class="k-logo-large">K</div><div><strong>K TOKEN</strong><small>KNOWLEDGE REWARDS</small></div></div><div class="wallet-balance-label">Số dư K Token</div><div class="wallet-balance">— — — <span>K</span></div><div class="wallet-preview-label"><span></span> BẢN XEM TRƯỚC · CHƯA CÓ SỐ DƯ THẬT</div></div>
+            <div class="wallet-coin-art"><div class="coin-ring"></div><div class="coin-core">K</div><div class="coin-star">✦</div></div>
+          </div>
+          <div class="notice notice-amber"><span>⚒</span><div><strong>K Token chưa được triển khai</strong><p>Ví và giao dịch đang ở chế độ xem trước. Chưa có token thật, không nhận tiền, không cộng/trừ số dư và không có giá trị quy đổi.</p></div></div>
+          <div class="wallet-actions"><button class="wallet-action-card" data-maintenance="Nạp K Token"><span class="action-icon">＋</span><strong>Nạp K Token</strong><small>Các phương thức nạp</small><span class="status-pill">ĐANG BẢO TRÌ</span></button><button class="wallet-action-card" data-maintenance="Nhận K Token"><span class="action-icon">✧</span><strong>Nhận K Token</strong><small>Tính năng dự kiến</small><span class="status-pill">SẮP RA MẮT</span></button><button class="wallet-action-card" data-maintenance="Sử dụng K Token"><span class="action-icon">↗</span><strong>Sử dụng token</strong><small>Tính năng dự kiến</small><span class="status-pill">SẮP RA MẮT</span></button><button class="wallet-action-card" data-maintenance="Chuyển K Token"><span class="action-icon">⇄</span><strong>Chuyển token</strong><small>Tính năng dự kiến</small><span class="status-pill">SẮP RA MẮT</span></button></div>
+          <div class="section-heading wallet-history-heading"><div><h2>Lịch sử giao dịch</h2><p>Chưa có giao dịch — tính năng chưa được kích hoạt.</p></div><select id="transactionFilter" aria-label="Lọc giao dịch"><option value="all">Tất cả giao dịch</option><option value="in">Nhận token</option><option value="out">Sử dụng token</option></select></div>
+          <div class="empty-transaction"><div class="empty-illustration">↔</div><strong>Chưa có dữ liệu giao dịch</strong><p>Lịch sử sẽ xuất hiện sau khi hệ thống được triển khai chính thức.</p></div>
+          <h2 class="subsection-title">Phương thức nạp dự kiến</h2><div class="payment-grid">
+            <button class="payment-card" data-maintenance="Google Play"><span class="payment-logo play">▶</span><span><strong>Google Play</strong><small>Thanh toán qua nền tảng hỗ trợ</small></span><span class="status-pill">BẢO TRÌ</span></button>
+            <button class="payment-card" data-maintenance="Thẻ ngân hàng nội địa"><span class="payment-logo bank">▤</span><span><strong>Thẻ ngân hàng nội địa</strong><small>Chưa kết nối cổng thanh toán</small></span><span class="status-pill">BẢO TRÌ</span></button>
+            <button class="payment-card" data-maintenance="Chuyển khoản ngân hàng"><span class="payment-logo transfer">⇄</span><span><strong>Chuyển khoản ngân hàng</strong><small>Chưa có thông tin nhận tiền</small></span><span class="status-pill">BẢO TRÌ</span></button>
+            <button class="payment-card" data-maintenance="Ví điện tử"><span class="payment-logo wallet">▣</span><span><strong>Ví điện tử</strong><small>Chờ triển khai trong tương lai</small></span><span class="status-pill">BẢO TRÌ</span></button>
+          </div>
+        </section>
+
+        <section class="view" id="view-profile">
+          <div class="page-intro"><div class="section-kicker">KHÔNG GIAN CÁ NHÂN</div><h1>Hồ sơ của bạn</h1><p>Quản lý các lựa chọn và hành trình khám phá của bạn.</p></div>
+          <div class="profile-card"><div class="profile-avatar" id="profileAvatar">KH</div><div class="profile-info"><h2 id="profileName">Khách khám phá</h2><p id="profileEmail">Bạn đang sử dụng chế độ khách trên thiết bị này.</p><span class="profile-tag">THÀNH VIÊN TRI THỨC</span></div><button class="outline-btn" id="profileLogin">Đăng nhập Google</button></div>
+          <div class="stats-grid"><div class="stat-card"><span>Bài đã lưu</span><strong id="statSaved">0</strong><small>Trên thiết bị này</small></div><div class="stat-card"><span>Bài đã đọc</span><strong id="statRead">0</strong><small>Lịch sử cục bộ</small></div><div class="stat-card"><span>Danh mục khám phá</span><strong id="statCats">0</strong><small>Trong thư viện mẫu</small></div></div>
+          <div class="settings-panel"><h3>Cài đặt cá nhân</h3><div class="setting-row"><div><strong>Giao diện tối</strong><p>Giảm độ sáng giao diện khi đọc.</p></div><button class="switch" id="profileThemeSwitch" role="switch" aria-checked="false"><span></span></button></div><div class="setting-row"><div><strong>Dữ liệu trên thiết bị</strong><p>Bài đã lưu và lịch sử được giữ trong trình duyệt này.</p></div><button class="outline-btn danger-outline" id="clearLocalData">Xóa dữ liệu cục bộ</button></div><div class="setting-row"><div><strong>Tài khoản Google</strong><p>Đăng nhập thật cần cấu hình Firebase Authentication.</p></div><span class="config-tag">CHƯA CẤU HÌNH</span></div></div>
+        </section>
+
+        <section class="view" id="view-admin">
+          <div class="page-intro"><div class="section-kicker">KHU VỰC QUẢN TRỊ</div><h1>Admin Dashboard</h1><p>Bảng quản trị giao diện mẫu — chưa có xác thực quản trị phía máy chủ.</p></div>
+          <div class="notice notice-amber"><span>⚠</span><div><strong>Chế độ minh họa</strong><p>Không dùng trang này để quản lý dữ liệu thật. Cần backend và phân quyền server-side trước khi triển khai công khai.</p></div></div>
+          <div class="admin-grid"><div class="admin-stat"><span>Bài viết mẫu</span><strong id="adminArticleCount">0</strong><small>Đang hiển thị trong demo</small></div><div class="admin-stat"><span>Danh mục</span><strong>15</strong><small>Danh mục khởi tạo</small></div><div class="admin-stat"><span>K Token</span><strong>Đang bảo trì</strong><small>Chưa có giao dịch thật</small></div></div>
+          <div class="settings-panel"><h3>Quản lý nội dung mẫu</h3><p class="muted">Các thao tác bên dưới chỉ thay đổi giao diện trong phiên trình duyệt này.</p><div class="admin-buttons"><button class="primary-btn" id="adminNewArticle">＋ Thêm bài mẫu</button><button class="outline-btn" id="adminMaintenance">⚙ Trạng thái K Token</button></div><div id="adminArticleTable" class="admin-table"></div></div>
+        </section>
+      </div>
+      <footer class="main-footer"><div class="footer-brand"><img src="assets/logo.svg" alt=""><span><strong>Kho Tàng Tri Thức</strong><small>Mỗi ngày một khám phá mới.</small></span></div><div class="footer-links"><button data-view="categories">Danh mục</button><button data-view="profile">Tài khoản</button><button data-modal="privacy">Quyền riêng tư</button><button data-modal="about">Giới thiệu</button></div><div class="footer-copy">© 2026 Knowledge Hub. <span>Tri thức mở ra tương lai.</span></div></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Đóng">×</button><div class="modal-symbol" id="modalSymbol">K</div><div class="modal-eyebrow" id="modalEyebrow">K TOKEN</div><h2 id="modalTitle">Chức năng đang bảo trì</h2><p id="modalMessage">Chức năng này đang được nâng cấp.</p><div class="modal-note" id="modalNote">K Token chưa được triển khai. Vui lòng quay lại sau.</div><button class="primary-btn modal-ok" id="modalOk">Đã hiểu</button></div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
